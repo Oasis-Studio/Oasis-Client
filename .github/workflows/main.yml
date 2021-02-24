@@ -17,9 +17,10 @@ jobs:
         id: build
         uses: josephbmanley/build-godot-action@v1.4.0
         with:
-          name: Oasis Client
+          name: OasisClient
           preset: ${{ matrix.platform }}
           debugMode: "true"
+          projectDir: "Oasis-Client"
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
