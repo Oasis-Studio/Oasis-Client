@@ -1,0 +1,130 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://addons/OasisLib/ui/BedButton.gd" type="Script" id=1]
+[ext_resource path="res://scripts/panoramaCamera.gd" type="Script" id=2]
+[ext_resource path="res://scripts/BedrockTitleScreen.gd" type="Script" id=3]
+[ext_resource path="res://bedrock_res/resources/textures/ui/button_borderless_lighthover.tres" type="Texture" id=4]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_0.tres" type="Texture" id=5]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_5.tres" type="Texture" id=6]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_2.tres" type="Texture" id=7]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_4.tres" type="Texture" id=8]
+[ext_resource path="res://bedrock_res/resources/textures/ui/button_borderless_light.tres" type="Texture" id=9]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_3.tres" type="Texture" id=10]
+[ext_resource path="res://bedrock_res/resources/textures/ui/title.tres" type="Texture" id=11]
+[ext_resource path="res://bedrock_res/resources/textures/ui/panorama_1.tres" type="Texture" id=12]
+
+[node name="BedrockTitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+mouse_filter = 1
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panorama" type="Spatial" parent="."]
+
+[node name="0" type="Sprite3D" parent="Panorama"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5 )
+transparent = false
+double_sided = false
+texture = ExtResource( 5 )
+
+[node name="1" type="Sprite3D" parent="Panorama"]
+transform = Transform( -1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, 5, 0, 0 )
+transparent = false
+double_sided = false
+texture = ExtResource( 12 )
+
+[node name="2" type="Sprite3D" parent="Panorama"]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, 0, 5 )
+transparent = false
+double_sided = false
+texture = ExtResource( 7 )
+
+[node name="3" type="Sprite3D" parent="Panorama"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -5, 0, 0 )
+transparent = false
+double_sided = false
+texture = ExtResource( 10 )
+
+[node name="4" type="Sprite3D" parent="Panorama"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 5, 0 )
+transparent = false
+double_sided = false
+texture = ExtResource( 8 )
+
+[node name="5" type="Sprite3D" parent="Panorama"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, -5, 0 )
+transparent = false
+double_sided = false
+texture = ExtResource( 6 )
+
+[node name="Camera" type="Camera" parent="Panorama"]
+fov = 85.0
+script = ExtResource( 2 )
+
+[node name="Title" type="TextureRect" parent="."]
+margin_left = 323.0
+margin_top = 110.0
+margin_right = 2259.0
+margin_bottom = 475.0
+rect_scale = Vector2( 0.658, 0.658 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Btn" type="Control" parent="."]
+margin_left = 738.0
+margin_top = 507.0
+margin_right = 1182.0
+margin_bottom = 597.0
+mouse_filter = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Normal = ExtResource( 9 )
+Hover = ExtResource( 4 )
+Text = "Play"
+FilePath = "res://scenes/PlayMenu.tscn"
+
+[node name="Settings Btn" type="Control" parent="."]
+margin_left = 738.0
+margin_top = 603.0
+margin_right = 1182.0
+margin_bottom = 693.0
+mouse_filter = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Normal = ExtResource( 9 )
+Hover = ExtResource( 4 )
+Text = "Settings"
+
+[node name="Marketplace Btn" type="Control" parent="."]
+margin_left = 738.0
+margin_top = 701.0
+margin_right = 1182.0
+margin_bottom = 791.0
+mouse_filter = 1
+script = ExtResource( 1 )
+Normal = ExtResource( 9 )
+Hover = ExtResource( 4 )
+Text = "Marketplace"
+
+[node name="Profile Btn" type="Control" parent="."]
+margin_left = 1486.0
+margin_top = 801.0
+margin_right = 1618.0
+margin_bottom = 876.0
+mouse_filter = 1
+script = ExtResource( 1 )
+Normal = ExtResource( 9 )
+Hover = ExtResource( 4 )
+Text = "Profile"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

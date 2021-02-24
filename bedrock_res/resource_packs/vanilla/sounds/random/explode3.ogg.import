@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/explode3.ogg-f29d03a11ca5a63d0f4c3d5bac8f9936.oggstr"
+
+[deps]
+
+source_file="res://bedrock_res/resource_packs/vanilla/sounds/random/explode3.ogg"
+dest_files=[ "res://.import/explode3.ogg-f29d03a11ca5a63d0f4c3d5bac8f9936.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

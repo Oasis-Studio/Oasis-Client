@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/button_borderless_light.png-ccb6c102641f7bd01e60a68ef0538592.stex"

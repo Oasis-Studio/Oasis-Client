@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/panorama_1.png-ebde4bf582307d0c818b7fe8167c30cd.stex"

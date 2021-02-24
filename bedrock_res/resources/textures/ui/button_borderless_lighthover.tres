@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/button_borderless_lighthover.png-d28a0fb22478cf4f25942f9a3b64d6d3.stex"

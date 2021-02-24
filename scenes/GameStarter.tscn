@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/GameStarter.gd" type="Script" id=1]
+[ext_resource path="res://java_res/resources/textures/gui/options_background.tres" type="Texture" id=2]
+[ext_resource path="res://bedrock_res/resources/font/minecraft.tres" type="DynamicFont" id=3]
+[ext_resource path="res://addons/OasisLib/ui/BedButton.gd" type="Script" id=4]
+[ext_resource path="res://bedrock_res/resources/textures/ui/button_borderless_lighthover.tres" type="Texture" id=5]
+[ext_resource path="res://bedrock_res/resources/textures/ui/button_borderless_light.tres" type="Texture" id=6]
+
+[node name="GameStarter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controller" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 240.0
+margin_bottom = 135.0
+rect_scale = Vector2( 8, 8 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+focus_mode = 2
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.733333 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1916.0
+margin_bottom = 678.0
+custom_fonts/font = ExtResource( 3 )
+text = "We've detected this is your first time running our client! Please select your preferred theme:"
+align = 1
+valign = 1
+
+[node name="Java UI" type="Control" parent="."]
+margin_left = 738.0
+margin_top = 486.0
+margin_right = 1182.0
+margin_bottom = 576.0
+mouse_filter = 1
+script = ExtResource( 4 )
+Normal = ExtResource( 6 )
+Hover = ExtResource( 5 )
+Text = "Java Edition"
+AddChild = false
+FilePath = "res://scenes/JavaTitleScreen.tscn"
+
+[node name="Bedrock UI" type="Control" parent="."]
+margin_left = 738.0
+margin_top = 389.821
+margin_right = 1182.0
+margin_bottom = 479.821
+mouse_filter = 1
+script = ExtResource( 4 )
+Normal = ExtResource( 6 )
+Hover = ExtResource( 5 )
+Text = "Bedrock Edition"
+AddChild = false
+FilePath = "res://scenes/BedrockTitleScreen.tscn"

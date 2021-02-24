@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/stonecutter_side.png-ba6c2d3230205a8748b80b267a087a3b.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://bedrock_res/resource_packs/vanilla/textures/blocks/stonecutter_side.png"
+dest_files=[ "res://.import/stonecutter_side.png-ba6c2d3230205a8748b80b267a087a3b.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
