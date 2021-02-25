@@ -63,6 +63,7 @@ func _input(event):
 					get_tree().get_current_scene().add_child(child)
 				else:
 					get_tree().change_scene(FilePath)
+				child.free()
 			#get_tree().get_current_scene().menu = "Play"
 			
 
