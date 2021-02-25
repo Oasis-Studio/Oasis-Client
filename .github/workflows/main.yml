@@ -1,4 +1,4 @@
-name: Build
+name: "Build"
 on: [push]
 jobs:
   build:
@@ -7,56 +7,56 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2.3.1
 
-      - name: Download Dependencies
+      - name: "Download Dependencies"
         run: |
           sudo apt-get update
           sudo apt-get -y install wget zip unzip
       
-      - name: Download Godot 3.2
+      - name: "Download Godot 3.2"
         run: |
           wget -q https://downloads.tuxfamily.org/godotengine/3.2/Godot_v3.2-stable_linux_headless.64.zip
           unzip Godot_v3.2-stable_linux_headless.64.zip
           mv Godot_v3.2-stable_linux_headless.64 godot
           chmod +x godot
       
-      - name: Download Godot 3.2 Export Templates
+      - name: "Download Godot 3.2 Export Templates"
         run: |
           wget -q https://downloads.tuxfamily.org/godotengine/3.2/Godot_v3.2-stable_export_templates.tpz
           mkdir -p ~/.local/share/godot/templates
           unzip Godot_v3.2-stable_export_templates.tpz -d ~/.local/share/godot/templates
           mv ~/.local/share/godot/templates/templates ~/.local/share/godot/templates/3.2.stable
       
-      - name: Export win64 build
+      - name: "Export win64 build"
         run: |
           mkdir -p win64
           ./godot --export win64 project.godot "win64/Oasis Client.exe"
-          zip win64 win64/*
       
-      - name: Upload Windows 64-bit
+      - name: "Upload Windows 64-bit"
         uses: actions/upload-artifact@v2
         with:
           name: Windows 64-bit
-          path: win64.zip
+          path: win64/*
       
-      - name: Export Linux Build
+      - name: "Export Linux Build"
         run: |
           mkdir -p linux64
           ./godot --export linux project.godot "linux64/oasis-client"
-          zip linux64 linux64/*
       
-      - name: Upload Linux 64-bit
+      - name: "Upload Linux 64-bit"
         uses: actions/upload-artifact@v2
         with: 
           name: Linux 64-bit
-          path: linux64.zip
+          path: linux64/*
       
-      - name: Export mac build
+      - name: "Export mac build"
         run: |
           ./godot --export macOS project.godot "macOS"
           mv macOS macOS.zip
+          mkdir -p macOS
+          unzip macOS.zip -d macOS
       
-      - name: Upload MacOS
+      - name: "Upload MacOS"
         uses: actions/upload-artifact@v2
         with: 
           name: MacOS
-          path: macOS.zip
+          path: macOS/*
