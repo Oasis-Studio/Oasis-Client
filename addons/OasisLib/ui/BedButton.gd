@@ -1,6 +1,6 @@
 # Allows us to display the Button in the editor and update it's rect size
 tool
-extends BedrockUI
+extends Control
 
 export(Texture) onready var Normal = load("res://bedrock_res/resources/textures/ui/button_borderless_light.tres")
 export(Texture) onready var Hover = load("res://bedrock_res/resources/textures/ui/button_borderless_lighthover.tres")

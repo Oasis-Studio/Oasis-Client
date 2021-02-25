@@ -4,7 +4,7 @@ extends EditorPlugin
 
 func _enter_tree():
 	print("[OasisLib] Tree Entered")
-	add_custom_type("BedButton", "Control", preload("res://addons/OasisLib/ui/BedButton.gd"), preload("res://addons/OasisLib/icons/UIButton.png"))
+	add_custom_type("BedButton", "Control", load("res://addons/OasisLib/ui/BedButton.gd"), load("res://addons/OasisLib/icons/UIButton.png"))
 	print("[OasisLib] Attempted to add UIButton")
 	#add_custom_type("JavaOptionsBackground", "Control", preload("res://addons/OasisLib/ui/UIButton.gd"), preload("res://addons/OasisLib/icons/UIButton.png"))
 	#print("[OasisLib] Attempted to add UIButton")
